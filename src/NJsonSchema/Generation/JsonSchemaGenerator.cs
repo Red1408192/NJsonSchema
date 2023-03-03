@@ -295,13 +295,6 @@ namespace NJsonSchema.Generation
             {
                 referencingSchema.Reference = referencedSchema.ActualSchema;
             }
-            else if (Settings.SchemaType != SchemaType.Swagger2)
-            {
-                referencingSchema._oneOf.Add(new JsonSchema
-                {
-                    Reference = referencedSchema.ActualSchema
-                });
-            }
             else
             {
                 referencingSchema._allOf.Add(new JsonSchema
